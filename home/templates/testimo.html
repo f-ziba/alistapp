@@ -1,0 +1,23 @@
+<div class="testimonial">
+    <div class="small-container">
+        <div class="row">
+            {% if testimo %}
+                {% for jay in testimo %}
+                    <div class="col-3">
+                        <i class="fa fa-quote-left"></i>
+                        <p>{{jay.comment}}</p>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <img src="{{jay.testimos.url}}" alt="">
+                        <h3>{{jay.name}}</h3>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+</div>
